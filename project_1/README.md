@@ -1,14 +1,13 @@
 # Project 1: SAT & ACT Analysis
 
 ## Problem Statement
----
 
 SAT and ACT are popular standardized tests for college admission in the US. Their purpose is to measure a high school student's readiness for college, and with one standardized score, colleges are able to compare all applicants. Overall, the higher the score on these tests, the more college options will become available.
 
 In this analysis, we explore SAT and ACT score requirements to see the relationship between college prestige and test scores. Scores of applicants for each college major will be considered, and the correlation of all variables, including number of applicants and acceptance rates, will be thoroughly analysed. With derived insights, we want to make recommendations for ideal scores for test takers to aim for, giving them the chance of enrolment into their ideal college and major.
 
 ## Data Dictionary
----
+
 ### Dataset 1: Schools' admittance scores and acceptance rates
 #### Dataset: df_college
 
@@ -45,7 +44,7 @@ Assumptions were made that the median scores of both SAT and ACT lies directly b
 |math_pct|float|SAT|Average score for "Math" section of applicants of the college major, converted to percentage| 
 
 ## Conclusions and Recommendations
----
+
 ### Conclusions
 
 ### From dataset 1: Schools' admittance scores and acceptance rates
