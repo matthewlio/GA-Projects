@@ -1,0 +1,23 @@
+# Project 3 - Web APIs & NLP: Subreddit Classification
+
+## Introduction
+
+In today's media driven world, it is very easy to share information. However, the lack of regulation means information derived online are often times without any factual backing by experts. Fitness and health is one of the topics that suffers the most from misinformation online. There exists a huge array of ways to keep fit, and with it comes many different topics under fitness. Moreover, the internet also consists of fitness fads, the latest diet craze, celebrity-endorsed fitness products, and wellness trends. Which advice can you trust? Even with degrees in sports science available in universities, the vast variety of fitness activities and training methods mean that fitness experts often have to decide on a specific type of sport activity or training to specialise in. Specialised methods, technique and diet in a particular sport, while effective for a particular sport, may be less effective for another. Individuals seeking advice online often find vast and varied information, and without factual backing by experts from specific fields, said advices could be ineffective or even dangerous when applied.
+
+
+## Problem Statement
+
+Misinformation is evident in the world of fitness. A popular fitness and health forum that welcomes all kinds of topics regarding sports, fitness and health, has realised the potential negative impact that could happen to individuals when wrong advices are followed. Beginners often direct questions to the wrong experts due to a lack of knowledge, by posting in the wrong threads, therefore getting misinformed.
+
+The fitness forum wants to focus on 2 popular topics, weightlifting and calisthenics (bodyweight fitness). These 2 sport types, while they share some similarities, are actually very different in terms of training methods and techniques. The fitness forum wants to hire a data scientist with knowledge in the fitness industry, in hopes of creating a classification model that will be able to classify questions from beginners into the proper threads, so that the respondents would be the right experts in each field.
+
+
+## Executive Summary
+
+Our problem statement is to classify fitness and health related questions or posts into the correct subreddit, so that the right experts can give proper advice and answers to these posts. If posts are incorrectly classified, the original poster may receive wrong information, as incorrect experts would be answering their questions. Incorrect information includes inefficient training methods or bad diet plans for their intended sport. This in turn could cause the posters slower improvements/growth and even injury. We can thus see that wrongly classified posts could have a really negative impact, and we should reduce this as much as possible.
+
+We have selected 3 different estimators and 2 different transformers, for a total of 6 different types of models. Different parameters will be passed into each model using Pipeline and GridSearchCV, which would help us to cross validate within itself and produce for us the best scores using the best parameters.
+
+To summarise post model tuning, we have managed to tune a model to our accuracy expectations, although there are rooms for improvement. Our model, the Logistic Regression with TF-IDF Vectorizer model, scored reasonably well with test accuracy, PPV and NPV scores all above 0.8. This roughly translates to 1 wrongly classified post for every 5 posts. This is acceptable in our terms to solve our classification problem; wrongly classified posts, although may result in negative impacts toward the poster for following wrong advices, are not immediately dangerous towards the poster himself or the general public. In addition, due to the similarities of weightlifting and bodyweight fitness in terms of words used in the fitness industry as well as advices that might be given by experts, we expected some posts to overlap or be very similar to either subreddits, and could actually prove to belong to either subreddits. So a low amount of "wrongly" classified posts might not be so wrong after all.
+
+We also thought about ways to improve our production model, including fine-tuning current model to avoid overfitting, or to fine-tune other more complex models that could potentially be more accurate as compared to Logistic Regression as the estimator. More parameters could be explored to include into our models, like increasing the max features, or use more n-gram ranges. Other classification models not tested in this project could also be explored.
